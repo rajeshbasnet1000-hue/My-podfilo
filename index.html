@@ -1,9 +1,9 @@
-<!DOCTYPEhtml>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rajesh Basnet | Creative Designer & Editor</title>
+    <title>Rajesh Basnet | Graphic Designer, Motion Graphics & Video Editor</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
@@ -32,7 +32,7 @@
             overflow-x: hidden;
         }
 
-        /* --- Header & Nav --- */
+        /* --- Header & Navigation --- */
         header {
             position: fixed;
             top: 0;
@@ -92,7 +92,7 @@
         }
 
         .hero-text h1 {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             font-weight: 800;
             margin: 10px 0;
             line-height: 1.2;
@@ -100,9 +100,9 @@
 
         .hero-text p {
             color: var(--text-sub);
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             margin-bottom: 30px;
-            max-width: 500px;
+            max-width: 520px;
         }
 
         .btn-group {
@@ -152,10 +152,11 @@
 
         .hero-image img {
             width: 100%;
-            max-width: 420px;
+            max-width: 400px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(230, 36, 41, 0.2);
             border: 2px solid rgba(255, 255, 255, 0.1);
+            object-fit: cover;
         }
 
         /* --- Services Section --- */
@@ -227,16 +228,21 @@
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.05);
             transition: 0.3s;
+            display: flex;
+            flex-direction: column;
         }
 
         .portfolio-card:hover {
-            transform: scale(1.02);
+            transform: translateY(-5px);
+            border-color: rgba(230, 36, 41, 0.5);
         }
 
-        .portfolio-card img, .portfolio-card video {
+        .portfolio-card img, 
+        .portfolio-card video {
             width: 100%;
-            height: 240px;
+            height: 260px;
             object-fit: cover;
+            background: #000;
             display: block;
         }
 
@@ -336,11 +342,11 @@
 
             nav a {
                 margin-left: 12px;
-                font-size: 0.9rem;
+                font-size: 0.85rem;
             }
 
             .hero-text h1 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
         }
     </style>
@@ -361,14 +367,14 @@
     <section class="hero">
         <div class="hero-text">
             <h3>Creative Studio</h3>
-            <h1>Graphic Designer & Video Editor</h1>
-            <p>Bringing ideas to life through high-impact visual design, dynamic motion graphics, and engaging video edits for personal & corporate brands.</p>
+            <h1>Graphic Designer, Motion Artist & Video Editor</h1>
+            <p>Crafting high-converting promotional banners, smooth motion graphics, and engaging reel edits designed to grow your brand digital presence.</p>
             <div class="btn-group">
                 <a href="https://wa.me/9779829670298" target="_blank" class="btn btn-whatsapp">
-                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    <i class="fab fa-whatsapp"></i> WhatsApp Me
                 </a>
                 <a href="mailto:rajeshbasnet1000@gmail.com" class="btn btn-primary">
-                    <i class="far fa-envelope"></i> Email Me
+                    <i class="far fa-envelope"></i> Send Email
                 </a>
             </div>
         </div>
@@ -383,72 +389,114 @@
         <div class="services-grid">
             <div class="service-card">
                 <i class="fas fa-palette"></i>
-                <h3>Graphic Design</h3>
-                <p>Social media banners, promotional flyers, menu templates, and travel infographics tailored to your brand identity.</p>
+                <h3>Graphic Designing</h3>
+                <p>Social media ads, promotional banners, flyers, restaurant menus, travel infographics, and brand design assets.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-film"></i>
                 <h3>Motion Graphics</h3>
-                <p>Eye-catching typography animations, UI/UX interaction visualizers, dynamic promo clips, and engaging stories.</p>
+                <p>Dynamic title animations, eye-catching text effects, overlay elements, interactive graphics, and visual effects.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-video"></i>
                 <h3>Video Editing</h3>
-                <p>High-converting social ad edits, cinematic pacing, sound design, overlay effects, and promotional content creator edits.</p>
+                <p>High-converting Instagram reels, TikTok content edits, product showcase videos, promo clips, and sound design.</p>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
+    <!-- Combined Portfolio Section (Images & Videos) -->
     <section class="portfolio" id="portfolio">
         <h2 class="section-title">Featured <span>Work</span></h2>
         <div class="portfolio-grid">
             
+            <!-- Video Project 1 -->
             <div class="portfolio-card">
-                <img src="project-burger-menu-templates.jpg" alt="Food & Restaurant Banners">
+                <video controls poster="project-burger-menu-templates.jpg">
+                    <source src="reel-01.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
                 <div class="portfolio-info">
-                    <h4>Restaurant Banner & Menu Design</h4>
-                    <p>Graphic Design</p>
+                    <h4>Food Product Interactive Reel</h4>
+                    <p>Motion Graphics / Video Editing</p>
                 </div>
             </div>
 
+            <!-- Video Project 2 -->
             <div class="portfolio-card">
-                <img src="project-binmoosa-usa.jpg" alt="Travel Flyer Design">
+                <video controls>
+                    <source src="reel-02.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
                 <div class="portfolio-info">
-                    <h4>USA Tour Promotional Poster</h4>
-                    <p>Graphic Design</p>
+                    <h4>Social Media Ad Strategy Commercial</h4>
+                    <p>Motion Graphics / Video Editing</p>
                 </div>
             </div>
 
+            <!-- Video Project 3 -->
             <div class="portfolio-card">
-                <img src="project-india-view-infographic.jpg" alt="Infographic Design">
+                <video controls>
+                    <source src="reel-03.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
                 <div class="portfolio-info">
-                    <h4>Travel Destinations Infographic</h4>
-                    <p>Graphic Design</p>
+                    <h4>Brand Identity & Marketing Promo</h4>
+                    <p>Motion Graphics / Video Editing</p>
                 </div>
             </div>
 
+            <!-- Graphic Design Project 1 -->
             <div class="portfolio-card">
-                <img src="project-mazze-banners.jpg" alt="Ecommerce Banner">
+                <img src="project-burger-menu-templates.jpg" alt="Restaurant Menu Designs">
                 <div class="portfolio-info">
-                    <h4>Moda Feminina Dropshipping Banner</h4>
-                    <p>Graphic Design</p>
+                    <h4>Food Poster & Menu Layouts</h4>
+                    <p>Graphic Designing</p>
                 </div>
             </div>
 
+            <!-- Graphic Design Project 2 -->
             <div class="portfolio-card">
-                <img src="project-japan-tour-brochure.jpg" alt="Japan Tour Designs">
+                <img src="project-binmoosa-usa.jpg" alt="USA Travel Flyer">
                 <div class="portfolio-info">
-                    <h4>Japanese Tour Campaign Flyers</h4>
-                    <p>Graphic Design</p>
+                    <h4>USA Eastern Delight Travel Flyer</h4>
+                    <p>Graphic Designing</p>
                 </div>
             </div>
 
+            <!-- Graphic Design Project 3 -->
             <div class="portfolio-card">
-                <img src="project-infinity-sky-web.jpg" alt="Web UI Concept Design">
+                <img src="project-india-view-infographic.jpg" alt="Travel Infographic">
+                <div class="portfolio-info">
+                    <h4>India View Travel Infographic Poster</h4>
+                    <p>Graphic Designing</p>
+                </div>
+            </div>
+
+            <!-- Graphic Design Project 4 -->
+            <div class="portfolio-card">
+                <img src="project-mazze-banners.jpg" alt="Fashion Dropshipping Banner">
+                <div class="portfolio-info">
+                    <h4>Moda Feminina Fashion Banners</h4>
+                    <p>Graphic Designing</p>
+                </div>
+            </div>
+
+            <!-- Graphic Design Project 5 -->
+            <div class="portfolio-card">
+                <img src="project-japan-tour-brochure.jpg" alt="Japan Tour Brochure">
+                <div class="portfolio-info">
+                    <h4>Japanese Tour Marketing Campaign</h4>
+                    <p>Graphic Designing</p>
+                </div>
+            </div>
+
+            <!-- Graphic Design Project 6 -->
+            <div class="portfolio-card">
+                <img src="project-infinity-sky-web.jpg" alt="Web UI Hero Banners">
                 <div class="portfolio-info">
                     <h4>Infinity Sky Landing Page Layout</h4>
-                    <p>Graphic Design / Web UI</p>
+                    <p>Graphic Designing / Web Design</p>
                 </div>
             </div>
 
@@ -458,13 +506,13 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <h2 class="section-title">Get In <span>Touch</span></h2>
-        <p style="color: var(--text-sub);">Ready to collaborate on your next big project? Reach out directly!</p>
+        <p style="color: var(--text-sub);">Let's create stunning graphics, motion assets, and videos for your brand!</p>
         
         <div class="contact-cards">
             <a href="https://wa.me/9779829670298" target="_blank" class="contact-box">
                 <i class="fab fa-whatsapp"></i>
                 <h4>WhatsApp</h4>
-                <p>+977 9829670298</p>
+                <p>9829670298</p>
             </a>
             <a href="mailto:rajeshbasnet1000@gmail.com" class="contact-box">
                 <i class="far fa-envelope"></i>
