@@ -290,7 +290,9 @@
     }
 
     @keyframes spin{
-      to{transform:rotate(360deg)}
+      to{
+        transform:rotate(360deg);
+      }
     }
 
     .floating{
@@ -340,7 +342,9 @@
     }
 
     @keyframes marquee{
-      to{transform:translateX(-50%)}
+      to{
+        transform:translateX(-50%);
+      }
     }
 
     /* SECTIONS */
@@ -417,6 +421,7 @@
       font-size:9px;
       font-weight:900;
       letter-spacing:2px;
+      z-index:3;
     }
 
     .about-text-large{
@@ -542,6 +547,7 @@
 
     .video-label{
       position:absolute;
+      z-index:2;
       top:15px;
       left:15px;
       font-size:8px;
@@ -1038,10 +1044,6 @@
         grid-template-columns:1fr;
       }
 
-      .video-card:first-child{
-        grid-column:auto;
-      }
-
       .project-image{
         height:300px;
       }
@@ -1064,6 +1066,20 @@
         flex-direction:column;
       }
     }
+
+    @media (prefers-reduced-motion: reduce){
+      html{
+        scroll-behavior:auto;
+      }
+
+      *,
+      *::before,
+      *::after{
+        animation-duration:.01ms!important;
+        animation-iteration-count:1!important;
+        transition-duration:.01ms!important;
+      }
+    }
   </style>
 </head>
 
@@ -1073,7 +1089,14 @@
   <div class="navbar">
     <a href="#home" class="logo">RAJESH<span>.STUDIO</span></a>
 
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    <button
+      class="menu-btn"
+      id="menuBtn"
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="navLinks"
+    >☰</button>
 
     <nav class="nav-links" id="navLinks">
       <a href="#home">HOME</a>
@@ -1172,7 +1195,12 @@
       <div class="about-grid">
 
         <div class="profile-card reveal">
-          <img src="profile-photo.png" alt="Rajesh — Graphic Designer" class="profile-photo">
+          <img
+            src="profile-photo.png"
+            alt="Rajesh — Graphic Designer"
+            class="profile-photo"
+            loading="lazy"
+          >
           <small>RAJESH STUDIO / CREATIVE PORTFOLIO</small>
         </div>
 
@@ -1224,7 +1252,10 @@
         <span class="service-icon">✦</span>
         <div>
           <h3>GRAPHIC DESIGN</h3>
-          <p>Social media creatives, advertising designs, campaign visuals, posters and promotional artwork.</p>
+          <p>
+            Social media creatives, advertising designs, campaign visuals,
+            posters and promotional artwork.
+          </p>
         </div>
         <span class="service-arrow">↗</span>
       </div>
@@ -1234,7 +1265,10 @@
         <span class="service-icon">▶</span>
         <div>
           <h3>VIDEO EDITING</h3>
-          <p>Professional reels, promotional videos, social content and cinematic edits.</p>
+          <p>
+            Professional reels, promotional videos, social content and
+            cinematic edits.
+          </p>
         </div>
         <span class="service-arrow">↗</span>
       </div>
@@ -1244,7 +1278,10 @@
         <span class="service-icon">◈</span>
         <div>
           <h3>MOTION GRAPHICS</h3>
-          <p>Animated typography, logo animation, promotional motion graphics and visual effects.</p>
+          <p>
+            Animated typography, logo animation, promotional motion graphics
+            and visual effects.
+          </p>
         </div>
         <span class="service-arrow">↗</span>
       </div>
@@ -1254,7 +1291,10 @@
         <span class="service-icon">◎</span>
         <div>
           <h3>BRAND VISUALS</h3>
-          <p>Visual identity systems, promotional materials and consistent brand communication.</p>
+          <p>
+            Visual identity systems, promotional materials and consistent
+            brand communication.
+          </p>
         </div>
         <span class="service-arrow">↗</span>
       </div>
@@ -1264,7 +1304,10 @@
         <span class="service-icon">▦</span>
         <div>
           <h3>SOCIAL MEDIA DESIGN</h3>
-          <p>High-impact creative content for Instagram, TikTok, Facebook and other platforms.</p>
+          <p>
+            High-impact creative content for Instagram, TikTok, Facebook
+            and other platforms.
+          </p>
         </div>
         <span class="service-arrow">↗</span>
       </div>
@@ -1296,7 +1339,13 @@
         <div class="video-card reveal">
           <div class="video-preview">
             <span class="video-label">REEL / 01</span>
-            <video class="video-tag" src="reel-01.mp4" controls preload="metadata" playsinline></video>
+            <video
+              class="video-tag"
+              src="reel-01.mp4"
+              controls
+              preload="metadata"
+              playsinline
+            ></video>
           </div>
           <div class="video-info">
             <h3>FAST / FOCUSED</h3>
@@ -1307,7 +1356,13 @@
         <div class="video-card reveal">
           <div class="video-preview">
             <span class="video-label">REEL / 02</span>
-            <video class="video-tag" src="reel-02.mp4" controls preload="metadata" playsinline></video>
+            <video
+              class="video-tag"
+              src="reel-02.mp4"
+              controls
+              preload="metadata"
+              playsinline
+            ></video>
           </div>
           <div class="video-info">
             <h3>BRAND IN MOTION</h3>
@@ -1318,7 +1373,13 @@
         <div class="video-card reveal">
           <div class="video-preview">
             <span class="video-label">REEL / 03</span>
-            <video class="video-tag" src="reel-03.mp4" controls preload="metadata" playsinline></video>
+            <video
+              class="video-tag"
+              src="reel-03.mp4"
+              controls
+              preload="metadata"
+              playsinline
+            ></video>
           </div>
           <div class="video-info">
             <h3>VISUAL STORY</h3>
@@ -1329,7 +1390,13 @@
         <div class="video-card reveal">
           <div class="video-preview">
             <span class="video-label">REEL / 04</span>
-            <video class="video-tag" src="reel-04.mp4" controls preload="metadata" playsinline></video>
+            <video
+              class="video-tag"
+              src="reel-04.mp4"
+              controls
+              preload="metadata"
+              playsinline
+            ></video>
           </div>
           <div class="video-info">
             <h3>SOCIAL EDIT</h3>
@@ -1400,19 +1467,23 @@
       </div>
 
       <div class="filters">
-        <button class="filter active" data-filter="all">ALL</button>
-        <button class="filter" data-filter="social">SOCIAL</button>
-        <button class="filter" data-filter="branding">BRANDING</button>
-        <button class="filter" data-filter="travel">TRAVEL</button>
-        <button class="filter" data-filter="fashion">FASHION</button>
-        <button class="filter" data-filter="graphic">GRAPHIC</button>
+        <button class="filter active" type="button" data-filter="all">ALL</button>
+        <button class="filter" type="button" data-filter="social">SOCIAL</button>
+        <button class="filter" type="button" data-filter="branding">BRANDING</button>
+        <button class="filter" type="button" data-filter="travel">TRAVEL</button>
+        <button class="filter" type="button" data-filter="fashion">FASHION</button>
+        <button class="filter" type="button" data-filter="graphic">GRAPHIC</button>
       </div>
 
       <div class="portfolio">
 
         <article class="project reveal" data-type="social">
           <div class="project-image">
-            <img src="project-mcdonalds-social.jpg" alt="McDonald's social media testimonial campaign" loading="lazy">
+            <img
+              src="project-mcdonalds-social.jpg"
+              alt="McDonald's social media testimonial campaign"
+              loading="lazy"
+            >
             <span class="project-number">01</span>
           </div>
           <div class="project-info">
@@ -1427,7 +1498,11 @@
 
         <article class="project reveal" data-type="social">
           <div class="project-image">
-            <img src="project-redbull-social.jpg" alt="Red Bull social media testimonial campaign" loading="lazy">
+            <img
+              src="project-redbull-social.jpg"
+              alt="Red Bull social media testimonial campaign"
+              loading="lazy"
+            >
             <span class="project-number">02</span>
           </div>
           <div class="project-info">
@@ -1442,7 +1517,11 @@
 
         <article class="project reveal" data-type="branding">
           <div class="project-image">
-            <img src="project-jewellery-branding.jpg" alt="Bespoke jewellery brand identity grid" loading="lazy">
+            <img
+              src="project-jewellery-branding.jpg"
+              alt="Bespoke jewellery brand identity grid"
+              loading="lazy"
+            >
             <span class="project-number">03</span>
           </div>
           <div class="project-info">
@@ -1457,7 +1536,11 @@
 
         <article class="project reveal" data-type="branding">
           <div class="project-image">
-            <img src="project-rfd-logo.jpg" alt="Ratuwamai Food Delivery logo design" loading="lazy">
+            <img
+              src="project-rfd-logo.jpg"
+              alt="Ratuwamai Food Delivery logo design"
+              loading="lazy"
+            >
             <span class="project-number">04</span>
           </div>
           <div class="project-info">
@@ -1472,7 +1555,11 @@
 
         <article class="project reveal" data-type="travel">
           <div class="project-image">
-            <img src="project-study-abroad-uk.jpg" alt="Study abroad campaign poster" loading="lazy">
+            <img
+              src="project-study-abroad-uk.jpg"
+              alt="Study abroad campaign poster"
+              loading="lazy"
+            >
             <span class="project-number">05</span>
           </div>
           <div class="project-info">
@@ -1487,7 +1574,11 @@
 
         <article class="project reveal" data-type="travel">
           <div class="project-image">
-            <img src="project-binmoosa-usa.jpg" alt="USA Eastern Delight travel campaign poster" loading="lazy">
+            <img
+              src="project-binmoosa-usa.jpg"
+              alt="USA Eastern Delight travel campaign poster"
+              loading="lazy"
+            >
             <span class="project-number">06</span>
           </div>
           <div class="project-info">
@@ -1502,7 +1593,11 @@
 
         <article class="project reveal" data-type="fashion">
           <div class="project-image">
-            <img src="project-ctrl-streetwear.jpg" alt="CTRL streetwear drop campaign poster" loading="lazy">
+            <img
+              src="project-ctrl-streetwear.jpg"
+              alt="CTRL streetwear drop campaign poster"
+              loading="lazy"
+            >
             <span class="project-number">07</span>
           </div>
           <div class="project-info">
@@ -1517,7 +1612,11 @@
 
         <article class="project reveal" data-type="fashion">
           <div class="project-image">
-            <img src="project-visora-hoody.jpg" alt="Visora hoody product campaign poster" loading="lazy">
+            <img
+              src="project-visora-hoody.jpg"
+              alt="Visora hoody product campaign poster"
+              loading="lazy"
+            >
             <span class="project-number">08</span>
           </div>
           <div class="project-info">
@@ -1532,7 +1631,11 @@
 
         <article class="project reveal" data-type="graphic">
           <div class="project-image">
-            <img src="project-glokitchen-menu.jpg" alt="Glo Kitchen restaurant menu design" loading="lazy">
+            <img
+              src="project-glokitchen-menu.jpg"
+              alt="Glo Kitchen restaurant menu design"
+              loading="lazy"
+            >
             <span class="project-number">09</span>
           </div>
           <div class="project-info">
@@ -1622,9 +1725,9 @@
         </blockquote>
 
         <div class="quote-controls">
-          <button id="previousQuote">←</button>
+          <button id="previousQuote" type="button" aria-label="Previous testimonial">←</button>
           <span id="quoteNumber">01 / 03</span>
-          <button id="nextQuote">→</button>
+          <button id="nextQuote" type="button" aria-label="Next testimonial">→</button>
         </div>
 
       </div>
@@ -1652,7 +1755,7 @@
           EMAIL ME ↗
         </a>
 
-        <button class="btn" id="copyEmail">
+        <button class="btn" id="copyEmail" type="button">
           COPY EMAIL ⧉
         </button>
       </div>
@@ -1682,10 +1785,10 @@
 
     <div class="social">
       <a href="mailto:rajeshbasnet1000@gmail.com">EMAIL</a>
-      <a href="#" onclick="showToast('Add your Instagram link here.');return false;">INSTAGRAM</a>
-      <a href="#" onclick="showToast('Add your TikTok link here.');return false;">TIKTOK</a>
-      <a href="#" onclick="showToast('Add your Behance link here.');return false;">BEHANCE</a>
-      <a href="#" onclick="showToast('Add your LinkedIn link here.');return false;">LINKEDIN</a>
+      <a href="javascript:void(0)" onclick="showToast('Add your Instagram link here.');return false;">INSTAGRAM</a>
+      <a href="javascript:void(0)" onclick="showToast('Add your TikTok link here.');return false;">TIKTOK</a>
+      <a href="javascript:void(0)" onclick="showToast('Add your Behance link here.');return false;">BEHANCE</a>
+      <a href="javascript:void(0)" onclick="showToast('Add your LinkedIn link here.');return false;">LINKEDIN</a>
     </div>
 
   </div>
@@ -1696,38 +1799,56 @@
   </div>
 </footer>
 
-<div class="toast" id="toast"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
+  "use strict";
+
   /* MOBILE MENU */
   const menuBtn = document.getElementById("menuBtn");
   const navLinks = document.getElementById("navLinks");
 
-  menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-  });
+  if (menuBtn && navLinks) {
+    menuBtn.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
 
-  document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("open");
+      menuBtn.setAttribute("aria-expanded", String(isOpen));
+      menuBtn.setAttribute(
+        "aria-label",
+        isOpen ? "Close menu" : "Open menu"
+      );
     });
-  });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.setAttribute("aria-label", "Open menu");
+      });
+    });
+  }
 
   /* SCROLL ANIMATION */
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add("show");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {threshold:.1}
-  );
+  const observer = "IntersectionObserver" in window
+    ? new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      )
+    : null;
 
   document.querySelectorAll(".reveal").forEach(element => {
-    observer.observe(element);
+    if (observer) {
+      observer.observe(element);
+    } else {
+      element.classList.add("show");
+    }
   });
 
   /* PORTFOLIO FILTER */
@@ -1736,18 +1857,17 @@
 
   filterButtons.forEach(button => {
     button.addEventListener("click", () => {
-
       filterButtons.forEach(btn => btn.classList.remove("active"));
       button.classList.add("active");
 
       const filter = button.dataset.filter;
 
       projects.forEach(project => {
-        if(filter === "all" || project.dataset.type === filter){
-          project.classList.remove("hidden");
-        }else{
-          project.classList.add("hidden");
-        }
+        const matches =
+          filter === "all" ||
+          project.dataset.type === filter;
+
+        project.classList.toggle("hidden", !matches);
       });
     });
   });
@@ -1756,56 +1876,123 @@
   let quoteIndex = 0;
   const quotes = document.querySelectorAll(".quote");
   const quoteNumber = document.getElementById("quoteNumber");
+  const previousQuote = document.getElementById("previousQuote");
+  const nextQuote = document.getElementById("nextQuote");
 
-  function showQuote(index){
-    quoteIndex = (index + quotes.length) % quotes.length;
+  function showQuote(index) {
+    if (!quotes.length || !quoteNumber) return;
+
+    quoteIndex =
+      (index + quotes.length) % quotes.length;
 
     quotes.forEach((quote, i) => {
-      quote.classList.toggle("active", i === quoteIndex);
+      quote.classList.toggle(
+        "active",
+        i === quoteIndex
+      );
     });
 
     quoteNumber.textContent =
-      String(quoteIndex + 1).padStart(2,"0") + " / " +
-      String(quotes.length).padStart(2,"0");
+      String(quoteIndex + 1).padStart(2, "0") +
+      " / " +
+      String(quotes.length).padStart(2, "0");
   }
 
-  document.getElementById("previousQuote").addEventListener("click", () => {
-    showQuote(quoteIndex - 1);
-  });
+  if (previousQuote) {
+    previousQuote.addEventListener("click", () => {
+      showQuote(quoteIndex - 1);
+    });
+  }
 
-  document.getElementById("nextQuote").addEventListener("click", () => {
-    showQuote(quoteIndex + 1);
-  });
+  if (nextQuote) {
+    nextQuote.addEventListener("click", () => {
+      showQuote(quoteIndex + 1);
+    });
+  }
 
   /* COPY EMAIL */
   const email = "rajeshbasnet1000@gmail.com";
+  const copyEmailButton = document.getElementById("copyEmail");
 
-  document.getElementById("copyEmail").addEventListener("click", async () => {
-    try{
-      await navigator.clipboard.writeText(email);
-      showToast("Email copied!");
-    }catch(error){
-      const textarea = document.createElement("textarea");
-      textarea.value = email;
-      document.body.appendChild(textarea);
-      textarea.select();
-      document.execCommand("copy");
-      textarea.remove();
-      showToast("Email copied!");
+  async function copyText(text) {
+    if (
+      navigator.clipboard &&
+      window.isSecureContext
+    ) {
+      await navigator.clipboard.writeText(text);
+      return true;
     }
-  });
+
+    const textarea =
+      document.createElement("textarea");
+
+    textarea.value = text;
+    textarea.setAttribute("readonly", "");
+    textarea.style.position = "fixed";
+    textarea.style.opacity = "0";
+
+    document.body.appendChild(textarea);
+
+    textarea.focus();
+    textarea.select();
+
+    let copied = false;
+
+    try {
+      copied =
+        typeof document.execCommand === "function"
+          ? document.execCommand("copy")
+          : false;
+    } finally {
+      textarea.remove();
+    }
+
+    return copied;
+  }
+
+  if (copyEmailButton) {
+    copyEmailButton.addEventListener(
+      "click",
+      async () => {
+        try {
+          const copied = await copyText(email);
+
+          showToast(
+            copied
+              ? "Email copied!"
+              : "Copy failed — please copy the email manually."
+          );
+        } catch (error) {
+          showToast(
+            "Copy failed — please copy the email manually."
+          );
+        }
+      }
+    );
+  }
 
   /* TOAST */
-  function showToast(message){
-    const toast = document.getElementById("toast");
+  let toastTimer;
+
+  function showToast(message) {
+    const toast =
+      document.getElementById("toast");
+
+    if (!toast) return;
 
     toast.textContent = message;
     toast.classList.add("show");
 
-    setTimeout(() => {
+    clearTimeout(toastTimer);
+
+    toastTimer = setTimeout(() => {
       toast.classList.remove("show");
-    },2200);
+    }, 2200);
   }
+</script>
+
+</body>
+</html>
 </script>
 
 </body>
