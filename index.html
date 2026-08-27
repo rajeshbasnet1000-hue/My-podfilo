@@ -444,10 +444,13 @@
       position:absolute;
       bottom:20px;
       left:22px;
+      z-index:3;
       color:#777;
       font-size:9px;
       font-weight:900;
       letter-spacing:2px;
+      background: rgba(0,0,0,0.6);
+      padding: 4px 8px;
     }
 
     .about-text-large{
@@ -575,10 +578,12 @@
       position:absolute;
       top:15px;
       left:15px;
+      z-index: 2;
       font-size:8px;
       font-weight:900;
       letter-spacing:1px;
-      z-index: 2;
+      background: rgba(0,0,0,0.6);
+      padding: 3px 6px;
     }
 
     .video-info{
@@ -593,30 +598,13 @@
       color:#777;
     }
 
-    /* MEDIA FIX — keep images/videos visible and correctly sized */
+    /* MEDIA FIX */
     .profile-photo,
     .project-image img,
     .video-tag{
       width:100%;
       max-width:100%;
       display:block;
-    }
-
-    .video-preview{
-      position:relative;
-      width:100%;
-      height:330px;
-      overflow:hidden;
-    }
-
-    .video-tag{
-      height:100%;
-      object-fit:cover;
-      background:#000;
-    }
-
-    .video-tag[hidden]{
-      display:none!important;
     }
 
     /* MOTION */
@@ -1245,7 +1233,7 @@
       <div class="about-grid">
 
         <div class="profile-card reveal">
-          <img src="profile-photo.jpg" alt="Rajesh — Graphic Designer" class="profile-photo">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop" alt="Rajesh — Graphic Designer" class="profile-photo">
           <small>RAJESH STUDIO / CREATIVE PORTFOLIO</small>
         </div>
 
@@ -1263,7 +1251,7 @@
 
           <div class="stats">
             <div class="stat">
-              <strong>11+</strong>
+              <strong>04+</strong>
               <span>FEATURED PROJECTS</span>
             </div>
 
@@ -1369,44 +1357,52 @@
         <div class="video-card reveal">
           <div class="video-preview">
             <span class="video-label">REEL / 01</span>
-            <video class="video-tag" src="input_file_0.mp4" controls preload="metadata" playsinline></video>
+            <video class="video-tag" controls preload="metadata" playsinline muted autoplay loop>
+              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+            </video>
           </div>
           <div class="video-info">
-            <h3>YUMMY BAKE HOUSE</h3>
-            <small>Interactive Menu Showcase</small>
+            <h3>FAST / FOCUSED</h3>
+            <small>Short-form Edit</small>
           </div>
         </div>
 
         <div class="video-card reveal">
           <div class="video-preview">
             <span class="video-label">REEL / 02</span>
-            <video class="video-tag" src="input_file_1.mp4" controls preload="metadata" playsinline></video>
+            <video class="video-tag" controls preload="metadata" playsinline muted autoplay loop>
+              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" type="video/mp4">
+            </video>
           </div>
           <div class="video-info">
-            <h3>SOCIAL HEAVEN</h3>
-            <small>Instagram Profile Strategy Ad</small>
+            <h3>BRAND IN MOTION</h3>
+            <small>Promotional Video</small>
           </div>
         </div>
 
         <div class="video-card reveal">
           <div class="video-preview">
             <span class="video-label">REEL / 03</span>
-            <video class="video-tag" src="input_file_2.mp4" controls preload="metadata" playsinline></video>
+            <video class="video-tag" controls preload="metadata" playsinline muted autoplay loop>
+              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4" type="video/mp4">
+            </video>
           </div>
           <div class="video-info">
-            <h3>BRAND COLLAB</h3>
-            <small>Marketing & Identity Reel</small>
+            <h3>VISUAL STORY</h3>
+            <small>Cinematic Edit</small>
           </div>
         </div>
 
         <div class="video-card reveal">
           <div class="video-preview">
             <span class="video-label">REEL / 04</span>
-            <video class="video-tag" src="input_file_3.mp4" controls preload="metadata" playsinline></video>
+            <video class="video-tag" controls preload="metadata" playsinline muted autoplay loop>
+              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyforces.mp4" type="video/mp4">
+            </video>
           </div>
           <div class="video-info">
-            <h3>CREATIVE VISION</h3>
-            <small>Inspirational Brand Reel</small>
+            <h3>SOCIAL EDIT</h3>
+            <small>Short-form Edit</small>
           </div>
         </div>
 
@@ -1485,7 +1481,7 @@
 
         <article class="project reveal" data-type="social">
           <div class="project-image">
-            <img src="./project-mcdonalds-social.jpg" alt="McDonald's social media testimonial campaign" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&auto=format&fit=crop" alt="McDonald's social media testimonial campaign" loading="lazy">
             <span class="project-number">01</span>
           </div>
           <div class="project-info">
@@ -1500,7 +1496,7 @@
 
         <article class="project reveal" data-type="social">
           <div class="project-image">
-            <img src="./project-redbull-social.jpg" alt="Red Bull social media testimonial campaign" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&auto=format&fit=crop" alt="Red Bull social media testimonial campaign" loading="lazy">
             <span class="project-number">02</span>
           </div>
           <div class="project-info">
@@ -1515,29 +1511,59 @@
 
         <article class="project reveal" data-type="branding">
           <div class="project-image">
-            <img src="./project-binmoosa-usa.jpg" alt="Bin Moosa Travel USA brand identity design" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&auto=format&fit=crop" alt="Bespoke jewellery brand identity grid" loading="lazy">
             <span class="project-number">03</span>
           </div>
           <div class="project-info">
             <div>
-              <small>BRANDING & TRAVEL</small>
-              <h3>BIN MOOSA TRAVEL USA</h3>
-              <p>Brand Identity · Travel</p>
+              <small>BRANDING</small>
+              <h3>JEWELLERY BRANDING</h3>
+              <p>Brand Identity · Instagram Grid</p>
             </div>
             <span class="service-arrow">↗</span>
           </div>
         </article>
 
-        <article class="project reveal" data-type="graphic">
+        <article class="project reveal" data-type="branding">
           <div class="project-image">
-            <img src="./project-burger-menu-templates.jpg" alt="Fast food burger menu layout templates design" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&auto=format&fit=crop" alt="Ratuwamai Food Delivery logo design" loading="lazy">
             <span class="project-number">04</span>
           </div>
           <div class="project-info">
             <div>
-              <small>GRAPHIC DESIGN</small>
-              <h3>BURGER MENU TEMPLATES</h3>
-              <p>Menu Layout · Graphic Design</p>
+              <small>LOGO DESIGN</small>
+              <h3>FOOD DELIVERY LOGO</h3>
+              <p>Branding · Logo Design</p>
+            </div>
+            <span class="service-arrow">↗</span>
+          </div>
+        </article>
+
+        <article class="project reveal" data-type="travel">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&auto=format&fit=crop" alt="Study abroad campaign poster" loading="lazy">
+            <span class="project-number">05</span>
+          </div>
+          <div class="project-info">
+            <div>
+              <small>CAMPAIGN DESIGN</small>
+              <h3>STUDY ABROAD CAMPAIGN</h3>
+              <p>Poster Design · Education</p>
+            </div>
+            <span class="service-arrow">↗</span>
+          </div>
+        </article>
+
+        <article class="project reveal" data-type="travel">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&auto=format&fit=crop" alt="USA Eastern Delight travel campaign poster" loading="lazy">
+            <span class="project-number">06</span>
+          </div>
+          <div class="project-info">
+            <div>
+              <small>TRAVEL CAMPAIGN</small>
+              <h3>USA TOUR CAMPAIGN</h3>
+              <p>Poster Design · Travel</p>
             </div>
             <span class="service-arrow">↗</span>
           </div>
@@ -1545,44 +1571,44 @@
 
         <article class="project reveal" data-type="fashion">
           <div class="project-image">
-            <img src="./project-ctrl-streetwear.jpg" alt="CTRL Streetwear fashion brand identity" loading="lazy">
-            <span class="project-number">05</span>
-          </div>
-          <div class="project-info">
-            <div>
-              <small>FASHION & BRANDING</small>
-              <h3>CTRL STREETWEAR</h3>
-              <p>Brand Identity · Fashion</p>
-            </div>
-            <span class="service-arrow">↗</span>
-          </div>
-        </article>
-
-        <article class="project reveal" data-type="graphic">
-          <div class="project-image">
-            <img src="./project-glokitchen-menu.jpg" alt="Glo Kitchen restaurant menu layout design" loading="lazy">
-            <span class="project-number">06</span>
-          </div>
-          <div class="project-info">
-            <div>
-              <small>GRAPHIC DESIGN</small>
-              <h3>GLO KITCHEN MENU</h3>
-              <p>Restaurant Layout · Graphic Design</p>
-            </div>
-            <span class="service-arrow">↗</span>
-          </div>
-        </article>
-
-        <article class="project reveal" data-type="graphic">
-          <div class="project-image">
-            <img src="./project-india-view-infographic.jpg" alt="India view infographic layout graphic design" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=800&auto=format&fit=crop" alt="CTRL streetwear drop campaign poster" loading="lazy">
             <span class="project-number">07</span>
           </div>
           <div class="project-info">
             <div>
-              <small>GRAPHIC DESIGN</small>
-              <h3>INDIA VIEW INFOGRAPHIC</h3>
-              <p>Infographic · Visual Layout</p>
+              <small>FASHION CAMPAIGN</small>
+              <h3>CTRL STREETWEAR DROP</h3>
+              <p>Product Poster · Fashion</p>
+            </div>
+            <span class="service-arrow">↗</span>
+          </div>
+        </article>
+
+        <article class="project reveal" data-type="fashion">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&auto=format&fit=crop" alt="Visora hoody product campaign poster" loading="lazy">
+            <span class="project-number">08</span>
+          </div>
+          <div class="project-info">
+            <div>
+              <small>PRODUCT AD</small>
+              <h3>VISORA HOODY CAMPAIGN</h3>
+              <p>Product Poster · Fashion</p>
+            </div>
+            <span class="service-arrow">↗</span>
+          </div>
+        </article>
+
+        <article class="project reveal" data-type="graphic">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop" alt="Glo Kitchen restaurant menu design" loading="lazy">
+            <span class="project-number">09</span>
+          </div>
+          <div class="project-info">
+            <div>
+              <small>MENU DESIGN</small>
+              <h3>GLO KITCHEN MENU</h3>
+              <p>Print Design · Restaurant Menu</p>
             </div>
             <span class="service-arrow">↗</span>
           </div>
@@ -1593,174 +1619,437 @@
   </section>
 
   <!-- PROCESS -->
-  <section class="process" id="process">
+  <section class="process">
     <div class="container">
+
       <div class="section-header reveal">
         <p class="section-label">06 / PROCESS</p>
-        <h2 class="section-title">HOW WE <span>WORK.</span></h2>
+        <h2 class="section-title">
+          HOW I <span>WORK.</span>
+        </h2>
       </div>
 
-      <div class="steps reveal">
-        <div class="step">
-          <p class="section-label">01</p>
-          <h3>DISCOVERY</h3>
-          <p>Understanding goals, brand vision, target audience and creative objectives.</p>
+      <div class="steps">
+
+        <div class="step reveal">
+          <b>01</b>
+          <h3>DISCOVER</h3>
+          <p>Understand the idea, audience and objective.</p>
         </div>
-        <div class="step">
-          <p class="section-label">02</p>
+
+        <div class="step reveal">
+          <b>02</b>
           <h3>CONCEPT</h3>
-          <p>Developing direction, storyboards, moodboards and initial creative ideas.</p>
+          <p>Develop the creative direction and visual concept.</p>
         </div>
-        <div class="step">
-          <p class="section-label">03</p>
-          <h3>EXECUTION</h3>
-          <p>Designing, editing and animating high-quality visual assets with precision.</p>
+
+        <div class="step reveal">
+          <b>03</b>
+          <h3>CREATE</h3>
+          <p>Design, edit, animate and refine the project.</p>
         </div>
-        <div class="step">
-          <p class="section-label">04</p>
-          <h3>DELIVERY</h3>
-          <p>Finalizing formats, optimizing for platforms and delivering production-ready files.</p>
+
+        <div class="step reveal">
+          <b>04</b>
+          <h3>DELIVER</h3>
+          <p>Deliver polished, professional final assets.</p>
         </div>
+
       </div>
     </div>
   </section>
 
   <!-- TESTIMONIALS -->
-  <section class="dark-section" id="testimonials">
+  <section>
     <div class="container">
+
+      <div class="section-header reveal">
+        <p class="section-label">07 / TESTIMONIALS</p>
+        <h2 class="section-title">
+          WORDS FROM<br>
+          <span>COLLABORATORS.</span>
+        </h2>
+      </div>
+
       <div class="quote-box reveal">
+
         <div class="quote-mark">“</div>
-        <div class="quote active" data-quote="1">
-          Rajesh brought an incredible sense of rhythm and polish to our video campaign. Visuals hit exactly the right mood.
-        </div>
-        <div class="quote" data-quote="2">
-          From motion graphics to social layouts, working together was seamless and the results exceeded expectations.
-        </div>
-        <div class="quote" data-quote="3">
-          Bold aesthetics, quick turnaround, and pure creative quality. Highly recommended for any brand push.
-        </div>
+
+        <blockquote class="quote active">
+          Rajesh brought a sharp visual direction to the project and made
+          the final campaign feel far more premium.
+        </blockquote>
+
+        <blockquote class="quote">
+          The editing had great rhythm and the motion details made the
+          content feel alive.
+        </blockquote>
+
+        <blockquote class="quote">
+          Fast communication, strong ideas and a clean final delivery.
+          A great creative partner.
+        </blockquote>
+
         <div class="quote-controls">
-          <button type="button" id="prevQuote" aria-label="Previous quote">←</button>
+          <button id="previousQuote" type="button" aria-label="Previous testimonial">←</button>
           <span id="quoteNumber">01 / 03</span>
-          <button type="button" id="nextQuote" aria-label="Next quote">→</button>
+          <button id="nextQuote" type="button" aria-label="Next testimonial">→</button>
         </div>
+
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section class="contact" id="contact">
-    <div class="container reveal">
-      <p class="section-label">07 / CONTACT</p>
-      <h2 class="section-title">LET'S CREATE SOMETHING <span>GREAT.</span></h2>
+    <div class="container">
+
+      <p class="section-label">08 / CONTACT</p>
+
+      <h2 class="section-title">
+        LET'S CREATE SOMETHING<br>
+        <span>UNFORGETTABLE.</span>
+      </h2>
+
       <p class="contact-description">
-        Ready to elevate your brand identity, launch a campaign, or produce standout video content? Get in touch today.
+        Have a project, campaign or creative idea?
+        Let's turn it into something people remember.
       </p>
-      <a class="email" href="mailto:rajeshbasnet1000@gmail.com">rajeshbasnet1000@gmail.com ↗</a>
+
+      <div class="buttons" style="justify-content:center">
+        <a class="btn btn-red" href="mailto:rajeshbasnet1000@gmail.com">
+          EMAIL ME ↗
+        </a>
+
+        <button class="btn" id="copyEmail" type="button">
+          COPY EMAIL ⧉
+        </button>
+      </div>
+
+      <a class="email" href="mailto:rajeshbasnet1000@gmail.com">
+        rajeshbasnet1000@gmail.com
+      </a>
+
     </div>
   </section>
 
 </main>
 
+<!-- FOOTER -->
 <footer>
   <div class="footer-top">
+
     <div>
-      <a href="#home" class="logo">RAJESH<span>.STUDIO</span></a>
-      <p class="footer-description">Graphic Design · Video Editing · Motion Graphics</p>
+      <a class="logo" href="#home">
+        RAJESH<span>.STUDIO</span>
+      </a>
+
+      <p class="footer-description">
+        Graphic Designer · Video Editor · Motion Graphics Designer
+      </p>
     </div>
+
     <div class="social">
       <a href="mailto:rajeshbasnet1000@gmail.com">EMAIL</a>
-      <a href="#home">INSTAGRAM</a>
-      <a href="#home">LINKEDIN</a>
-      <a href="#home">BEHANCE</a>
+      <a href="#" onclick="showToast('Add your Instagram link here.');return false;">INSTAGRAM</a>
+      <a href="#" onclick="showToast('Add your TikTok link here.');return false;">TIKTOK</a>
+      <a href="#" onclick="showToast('Add your Behance link here.');return false;">BEHANCE</a>
+      <a href="#" onclick="showToast('Add your LinkedIn link here.');return false;">LINKEDIN</a>
     </div>
+
   </div>
+
   <div class="footer-bottom">
-    <p>© 2026 RAJESH STUDIO. ALL RIGHTS RESERVED.</p>
-    <p>DESIGNED FOR HIGH VISUAL IMPACT</p>
+    <span>© 2026 Rajesh Studio. All rights reserved.</span>
+    <a href="#home">BACK TO TOP ↑</a>
   </div>
 </footer>
 
-<div class="toast" id="toast">Message status alert</div>
+<div class="toast" id="toast"></div>
 
 <script>
-  // Mobile Nav Toggle
-  const menuBtn = document.getElementById('menuBtn');
-  const navLinks = document.getElementById('navLinks');
+  "use strict";
 
-  if(menuBtn && navLinks){
-    menuBtn.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('open');
-      menuBtn.setAttribute('aria-expanded', isOpen);
+  /* =========================
+     SAFE DOM HELPERS
+  ========================= */
+  const $ = (selector, root = document) => root.querySelector(selector);
+  const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+
+  /* =========================
+     MOBILE NAVIGATION
+  ========================= */
+  const menuBtn = $("#menuBtn");
+  const navLinks = $("#navLinks");
+
+  function closeMenu(){
+    if (!navLinks || !menuBtn) return;
+    navLinks.classList.remove("open");
+    menuBtn.setAttribute("aria-expanded", "false");
+    menuBtn.setAttribute("aria-label", "Open menu");
+  }
+
+  if (menuBtn && navLinks) {
+    menuBtn.addEventListener("click", () => {
+      const open = navLinks.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", String(open));
+      menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    });
+
+    $$("a", navLinks).forEach(link => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("click", event => {
+      if (!navLinks.classList.contains("open")) return;
+      if (!navLinks.contains(event.target) && !menuBtn.contains(event.target)) {
+        closeMenu();
+      }
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") closeMenu();
     });
   }
 
-  // Portfolio Filters
-  const filterBtns = document.querySelectorAll('.filter');
-  const projects = document.querySelectorAll('.project');
+  /* =========================
+     SCROLL REVEAL
+  ========================= */
+  const revealElements = $$(".reveal");
+  const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
 
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    revealElements.forEach(element => element.classList.add("show"));
+  } else {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
 
-      const filter = btn.getAttribute('data-filter');
+    revealElements.forEach(element => observer.observe(element));
+  }
+
+  /* =========================
+     PORTFOLIO FILTER
+  ========================= */
+  const filterButtons = $$(".filter");
+  const projects = $$(".project");
+
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.filter || "all";
+
+      filterButtons.forEach(item => {
+        item.classList.toggle("active", item === button);
+      });
 
       projects.forEach(project => {
-        const type = project.getAttribute('data-type');
-        if(filter === 'all' || type === filter || (filter === 'graphic' && (type === 'graphic' || type === 'branding'))){
-          project.classList.remove('hidden');
-        } else {
-          project.classList.add('hidden');
-        }
+        const type = project.dataset.type || "";
+        const visible = filter === "all" || type === filter;
+        project.classList.toggle("hidden", !visible);
       });
     });
   });
 
-  // Testimonials Slider
-  const quotes = document.querySelectorAll('.quote');
-  const prevBtn = document.getElementById('prevQuote');
-  const nextBtn = document.getElementById('nextQuote');
-  const quoteNum = document.getElementById('quoteNumber');
-  let currentQuote = 0;
+  /* =========================
+     TESTIMONIAL SLIDER
+  ========================= */
+  const quotes = $$(".quote");
+  const quoteNumber = $("#quoteNumber");
+  const previousQuote = $("#previousQuote");
+  const nextQuote = $("#nextQuote");
+  let quoteIndex = 0;
 
-  function updateQuote(index){
-    quotes.forEach((q, i) => {
-      q.classList.toggle('active', i === index);
+  function showQuote(index){
+    if (!quotes.length) return;
+
+    quoteIndex = (index + quotes.length) % quotes.length;
+
+    quotes.forEach((quote, i) => {
+      quote.classList.toggle("active", i === quoteIndex);
     });
-    if(quoteNum){
-      quoteNum.textContent = `0${index + 1} / 0${quotes.length}`;
+
+    if (quoteNumber) {
+      quoteNumber.textContent =
+        `${String(quoteIndex + 1).padStart(2, "0")} / ${String(quotes.length).padStart(2, "0")}`;
     }
   }
 
-  if(prevBtn && nextBtn){
-    prevBtn.addEventListener('click', () => {
-      currentQuote = (currentQuote - 1 + quotes.length) % quotes.length;
-      updateQuote(currentQuote);
-    });
+  previousQuote?.addEventListener("click", () => showQuote(quoteIndex - 1));
+  nextQuote?.addEventListener("click", () => showQuote(quoteIndex + 1));
+  showQuote(0);
 
-    nextBtn.addEventListener('click', () => {
-      currentQuote = (currentQuote + 1) % quotes.length;
-      updateQuote(currentQuote);
-    });
+  /* =========================
+     TOAST
+  ========================= */
+  const toast = $("#toast");
+  let toastTimer;
+
+  function showToast(message){
+    if (!toast) return;
+    toast.textContent = message;
+    toast.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove("show"), 2400);
   }
 
-  // Scroll Reveal Animation
-  const reveals = document.querySelectorAll('.reveal');
+  window.showToast = showToast;
 
-  function checkReveal(){
-    const triggerBottom = window.innerHeight * 0.88;
-    reveals.forEach(el => {
-      const top = el.getBoundingClientRect().top;
-      if(top < triggerBottom){
-        el.classList.add('show');
+  /* =========================
+     COPY EMAIL
+  ========================= */
+  const email = "rajeshbasnet1000@gmail.com";
+  const copyEmail = $("#copyEmail");
+
+  async function copyText(text){
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(text);
+      return true;
+    }
+
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    textarea.setAttribute("readonly", "");
+    textarea.style.position = "fixed";
+    textarea.style.left = "-9999px";
+    textarea.style.top = "0";
+    document.body.appendChild(textarea);
+    textarea.focus();
+    textarea.select();
+
+    let copied = false;
+    try {
+      copied = typeof document.execCommand === "function" && document.execCommand("copy");
+    } catch (error) {
+      copied = false;
+    }
+
+    textarea.remove();
+    return copied;
+  }
+
+  copyEmail?.addEventListener("click", async () => {
+    try {
+      const copied = await copyText(email);
+      showToast(copied ? "Email copied!" : "Please copy the email manually.");
+    } catch (error) {
+      showToast("Please copy the email manually.");
+    }
+  });
+
+  /* =========================
+     MEDIA LOADER / FALLBACKS
+  ========================= */
+
+  function assetCandidates(src){
+    if (src.startsWith('http://') || src.startsWith('https://')) {
+      return [src];
+    }
+    const clean = src.replace(/^\.\/+/, "");
+    const file = clean.split("/").pop();
+    return [
+      `./${clean}`,
+      `./assets/${file}`,
+      `assets/${file}`,
+      `/${clean}`
+    ];
+  }
+
+  function showMediaFallback(element, title, message){
+    const parent = element.parentElement;
+    if (!parent || parent.querySelector(".media-fallback")) return;
+
+    const fallback = document.createElement("div");
+    fallback.className = "media-fallback";
+    fallback.innerHTML = `<div><strong>${title}</strong>${message}</div>`;
+    parent.appendChild(fallback);
+    element.style.display = "none";
+  }
+
+  $$("img").forEach(image => {
+    const original = image.getAttribute("src");
+    if (!original) return;
+
+    const candidates = assetCandidates(original);
+    let index = 0;
+
+    image.addEventListener("error", () => {
+      index += 1;
+
+      if (index < candidates.length) {
+        image.src = candidates[index];
+        return;
       }
+
+      showMediaFallback(
+        image,
+        image.alt || "Portfolio image",
+        "Check the image filename, extension and folder name."
+      );
     });
-  }
+  });
 
-  window.addEventListener('scroll', checkReveal);
-  checkReveal();
+  $$("video").forEach(video => {
+    const source = $("source", video);
+    if (!source) return;
+
+    const original = source.getAttribute("src");
+    if (!original) return;
+
+    const candidates = assetCandidates(original);
+    let index = 0;
+
+    function tryNextVideo(){
+      index += 1;
+
+      if (index < candidates.length) {
+        source.src = candidates[index];
+        video.load();
+        return;
+      }
+
+      video.style.display = "none";
+      showMediaFallback(
+        video,
+        "VIDEO PROJECT",
+        "Add the matching MP4 file beside index.html or inside /assets/."
+      );
+    }
+
+    video.addEventListener("error", tryNextVideo);
+    video.addEventListener("loadeddata", () => {
+      video.style.display = "block";
+    });
+  });
+
+  /* =========================
+     SMOOTH ANCHOR SCROLL
+  ========================= */
+  $$('a[href^="#"]').forEach(link => {
+    link.addEventListener("click", event => {
+      const id = link.getAttribute("href");
+      if (!id || id === "#") return;
+
+      const target = document.querySelector(id);
+      if (!target) return;
+
+      event.preventDefault();
+      const header = $("header");
+      const offset = (header?.offsetHeight || 0) + 12;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+
+      window.scrollTo({
+        top: Math.max(0, top),
+        behavior: reduceMotion ? "auto" : "smooth"
+      });
+
+      history.replaceState(null, "", id);
+    });
+  });
 </script>
-
 </body>
 </html>
