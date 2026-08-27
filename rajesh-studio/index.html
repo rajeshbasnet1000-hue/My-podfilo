@@ -593,6 +593,56 @@
       color:#777;
     }
 
+
+    /* MEDIA FIX — keep images/videos visible and correctly sized */
+    .profile-photo,
+    .project-image img,
+    .video-tag{
+      width:100%;
+      max-width:100%;
+      display:block;
+    }
+
+    .video-preview{
+      position:relative;
+      width:100%;
+      height:330px;
+      overflow:hidden;
+    }
+
+    .video-tag{
+      height:100%;
+      object-fit:cover;
+      background:#000;
+    }
+
+    .video-tag[hidden]{
+      display:none!important;
+    }
+
+    .media-fallback{
+      width:100%;
+      height:100%;
+      min-height:180px;
+      display:grid;
+      place-items:center;
+      padding:25px;
+      text-align:center;
+      background:
+        radial-gradient(circle at 70% 30%,rgba(229,9,20,.25),transparent 30%),
+        linear-gradient(135deg,#210006,#070707);
+      color:#777;
+      font-size:10px;
+      font-weight:800;
+      letter-spacing:1px;
+    }
+
+    .media-fallback strong{
+      display:block;
+      color:#fff;
+      margin-bottom:6px;
+    }
+
     /* MOTION */
     .motion-grid{
       display:grid;
@@ -1111,12 +1161,7 @@
         transition-duration:.01ms!important;
       }
     }
-  
-.video-box video{background:#111}
-.video-box video:focus{outline:2px solid var(--red);outline-offset:-2px}
-.media-error{position:absolute;inset:0;display:none;place-items:center;text-align:center;padding:20px;background:#111;color:#888;font-size:11px}
-.media-error.show{display:grid}
-</style>
+  </style>
 </head>
 
 <body>
@@ -1224,7 +1269,7 @@
       <div class="about-grid">
 
         <div class="profile-card reveal">
-          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1000&q=85" alt="Rajesh — Graphic Designer" class="profile-photo">
+          <img src="./profile-photo.png" alt="Rajesh — Graphic Designer" class="profile-photo">
           <small>RAJESH STUDIO / CREATIVE PORTFOLIO</small>
         </div>
 
@@ -1464,7 +1509,7 @@
 
         <article class="project reveal" data-type="social">
           <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=85" alt="McDonald's social media testimonial campaign" loading="lazy">
+            <img src="./project-mcdonalds-social.jpg" alt="McDonald's social media testimonial campaign" loading="lazy">
             <span class="project-number">01</span>
           </div>
           <div class="project-info">
@@ -1479,7 +1524,7 @@
 
         <article class="project reveal" data-type="social">
           <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=85" alt="Red Bull social media testimonial campaign" loading="lazy">
+            <img src="./project-redbull-social.jpg" alt="Red Bull social media testimonial campaign" loading="lazy">
             <span class="project-number">02</span>
           </div>
           <div class="project-info">
@@ -1494,7 +1539,7 @@
 
         <article class="project reveal" data-type="branding">
           <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=85" alt="Bespoke jewellery brand identity grid" loading="lazy">
+            <img src="./project-jewellery-branding.jpg" alt="Bespoke jewellery brand identity grid" loading="lazy">
             <span class="project-number">03</span>
           </div>
           <div class="project-info">
@@ -1509,7 +1554,7 @@
 
         <article class="project reveal" data-type="branding">
           <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=85" alt="Ratuwamai Food Delivery logo design" loading="lazy">
+            <img src="./project-rfd-logo.jpg" alt="Ratuwamai Food Delivery logo design" loading="lazy">
             <span class="project-number">04</span>
           </div>
           <div class="project-info">
@@ -1524,7 +1569,7 @@
 
         <article class="project reveal" data-type="travel">
           <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1521292270410-a8c4d716d518?auto=format&fit=crop&w=1200&q=85" alt="Study abroad campaign poster" loading="lazy">
+            <img src="./project-study-abroad-uk.jpg" alt="Study abroad campaign poster" loading="lazy">
             <span class="project-number">05</span>
           </div>
           <div class="project-info">
@@ -1539,7 +1584,7 @@
 
         <article class="project reveal" data-type="travel">
           <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=85" alt="USA Eastern Delight travel campaign poster" loading="lazy">
+            <img src="./project-binmoosa-usa.jpg" alt="USA Eastern Delight travel campaign poster" loading="lazy">
             <span class="project-number">06</span>
           </div>
           <div class="project-info">
@@ -1554,7 +1599,7 @@
 
         <article class="project reveal" data-type="fashion">
           <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=85" alt="CTRL streetwear drop campaign poster" loading="lazy">
+            <img src="./project-ctrl-streetwear.jpg" alt="CTRL streetwear drop campaign poster" loading="lazy">
             <span class="project-number">07</span>
           </div>
           <div class="project-info">
@@ -1569,7 +1614,7 @@
 
         <article class="project reveal" data-type="fashion">
           <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=1200&q=85" alt="Visora hoody product campaign poster" loading="lazy">
+            <img src="./project-visora-hoody.jpg" alt="Visora hoody product campaign poster" loading="lazy">
             <span class="project-number">08</span>
           </div>
           <div class="project-info">
@@ -1584,7 +1629,7 @@
 
         <article class="project reveal" data-type="graphic">
           <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=85" alt="Glo Kitchen restaurant menu design" loading="lazy">
+            <img src="./project-glokitchen-menu.jpg" alt="Glo Kitchen restaurant menu design" loading="lazy">
             <span class="project-number">09</span>
           </div>
           <div class="project-info">
@@ -1751,31 +1796,6 @@
 <div class="toast" id="toast"></div>
 
 <script>
-document.querySelectorAll("img").forEach(img=>{
-  img.addEventListener("error",()=>{
-    img.removeAttribute("src");
-    img.style.background="linear-gradient(135deg,#240006,#111)";
-    img.alt="Creative portfolio artwork";
-  });
-});
-
-document.querySelectorAll("video").forEach(video=>{
-  video.addEventListener("error",()=>{
-    video.style.display="none";
-    const box=video.closest(".video-box");
-    if(box){
-      let fallback=box.querySelector(".media-error");
-      if(!fallback){
-        fallback=document.createElement("div");
-        fallback.className="media-error";
-        fallback.textContent="Video preview unavailable. Replace the video URL with your own MP4.";
-        box.appendChild(fallback);
-      }
-      fallback.classList.add("show");
-    }
-  });
-});
-
   "use strict";
 
   /* =========================
@@ -1950,45 +1970,97 @@ document.querySelectorAll("video").forEach(video=>{
   });
 
   /* =========================
-     BROKEN IMAGE FALLBACKS
-     GitHub Pages is case-sensitive, so a missing/misnamed asset
-     should never leave an ugly broken-image icon.
+     MEDIA LOADER / FALLBACKS
+     =========================
+     Supports assets stored beside index.html.
+     If you use an /assets folder, the loader also tries that path.
   ========================= */
-  $$("img").forEach(image => {
-    image.addEventListener("error", () => {
-      if (image.dataset.fallbackApplied) return;
-      image.dataset.fallbackApplied = "true";
 
-      const fallback = document.createElement("div");
-      fallback.className = "media-fallback";
-      fallback.innerHTML = `<div><strong>${image.alt || "Portfolio image"}</strong>Replace this image file in the GitHub repository.</div>`;
+  function assetCandidates(src){
+    const clean = src.replace(/^\.\/+/, "");
+    const file = clean.split("/").pop();
+    const candidates = [
+      `./${clean}`,
+      `./assets/${file}`,
+      `assets/${file}`,
+      `/${clean}`
+    ];
+    return [...new Set(candidates)];
+  }
 
-      image.replaceWith(fallback);
-    });
-  });
+  function showMediaFallback(element, title, message){
+    const parent = element.parentElement;
+    if (!parent || parent.querySelector(".media-fallback")) return;
 
-  /* =========================
-     VIDEO FALLBACKS
-     A GitHub Pages site can serve MP4 files, but the MP4 files must
-     actually be committed to the repository.
-  ========================= */
-  $$("video").forEach(video => {
     const fallback = document.createElement("div");
     fallback.className = "media-fallback";
-    fallback.innerHTML = `<div><strong>VIDEO PROJECT</strong>Add the matching MP4 file to the GitHub repository.</div>`;
-    fallback.hidden = true;
+    fallback.innerHTML = `<div><strong>${title}</strong>${message}</div>`;
+    parent.appendChild(fallback);
+    element.style.display = "none";
+  }
 
-    video.insertAdjacentElement("afterend", fallback);
+  // Images: retry common GitHub Pages folder layouts before showing fallback.
+  $$("img").forEach(image => {
+    const original = image.getAttribute("src");
+    if (!original) return;
 
-    video.addEventListener("error", () => {
-      video.hidden = true;
-      fallback.hidden = false;
+    const candidates = assetCandidates(original);
+    let index = 0;
+
+    image.addEventListener("error", () => {
+      index += 1;
+
+      if (index < candidates.length) {
+        image.src = candidates[index];
+        return;
+      }
+
+      showMediaFallback(
+        image,
+        image.alt || "Portfolio image",
+        "Check the image filename, extension and folder name."
+      );
     });
 
+    // Start with the first candidate.
+    image.src = candidates[0];
+  });
+
+  // Videos: try normal path, then /assets/, and show a useful fallback if missing.
+  $$("video").forEach(video => {
+    const source = $("source", video);
+    if (!source) return;
+
+    const original = source.getAttribute("src");
+    if (!original) return;
+
+    const candidates = assetCandidates(original);
+    let index = 0;
+
+    function tryNextVideo(){
+      index += 1;
+
+      if (index < candidates.length) {
+        source.src = candidates[index];
+        video.load();
+        return;
+      }
+
+      video.style.display = "none";
+      showMediaFallback(
+        video,
+        "VIDEO PROJECT",
+        "Add the matching MP4 file beside index.html or inside /assets/."
+      );
+    }
+
+    video.addEventListener("error", tryNextVideo);
     video.addEventListener("loadeddata", () => {
-      fallback.hidden = true;
-      video.hidden = false;
+      video.style.display = "block";
     });
+
+    source.src = candidates[0];
+    video.load();
   });
 
   /* =========================
