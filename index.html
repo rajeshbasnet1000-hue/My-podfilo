@@ -46,6 +46,38 @@
       font:inherit;
     }
 
+
+    img, video{
+      max-width:100%;
+    }
+
+    img{
+      font-size:10px;
+    }
+
+    .media-fallback{
+      width:100%;
+      height:100%;
+      min-height:180px;
+      display:grid;
+      place-items:center;
+      padding:25px;
+      text-align:center;
+      background:
+        radial-gradient(circle at 70% 30%,rgba(229,9,20,.25),transparent 30%),
+        linear-gradient(135deg,#210006,#070707);
+      color:#777;
+      font-size:10px;
+      font-weight:800;
+      letter-spacing:1px;
+    }
+
+    .media-fallback strong{
+      display:block;
+      color:#fff;
+      margin-bottom:6px;
+    }
+
     .container{
       width:min(92%,var(--max));
       margin:auto;
@@ -290,9 +322,7 @@
     }
 
     @keyframes spin{
-      to{
-        transform:rotate(360deg);
-      }
+      to{transform:rotate(360deg)}
     }
 
     .floating{
@@ -342,9 +372,7 @@
     }
 
     @keyframes marquee{
-      to{
-        transform:translateX(-50%);
-      }
+      to{transform:translateX(-50%)}
     }
 
     /* SECTIONS */
@@ -421,7 +449,6 @@
       font-size:9px;
       font-weight:900;
       letter-spacing:2px;
-      z-index:3;
     }
 
     .about-text-large{
@@ -547,7 +574,6 @@
 
     .video-label{
       position:absolute;
-      z-index:2;
       top:15px;
       left:15px;
       font-size:8px;
@@ -1044,6 +1070,10 @@
         grid-template-columns:1fr;
       }
 
+      .video-card:first-child{
+        grid-column:auto;
+      }
+
       .project-image{
         height:300px;
       }
@@ -1067,14 +1097,15 @@
       }
     }
 
-    @media (prefers-reduced-motion: reduce){
-      html{
-        scroll-behavior:auto;
-      }
+    button:focus-visible,
+    a:focus-visible{
+      outline:2px solid var(--red);
+      outline-offset:3px;
+    }
 
-      *,
-      *::before,
-      *::after{
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto;}
+      *,*::before,*::after{
         animation-duration:.01ms!important;
         animation-iteration-count:1!important;
         transition-duration:.01ms!important;
@@ -1089,14 +1120,7 @@
   <div class="navbar">
     <a href="#home" class="logo">RAJESH<span>.STUDIO</span></a>
 
-    <button
-      class="menu-btn"
-      id="menuBtn"
-      type="button"
-      aria-label="Open menu"
-      aria-expanded="false"
-      aria-controls="navLinks"
-    >☰</button>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">☰</button>
 
     <nav class="nav-links" id="navLinks">
       <a href="#home">HOME</a>
@@ -1195,12 +1219,7 @@
       <div class="about-grid">
 
         <div class="profile-card reveal">
-          <img
-            src="profile-photo.png"
-            alt="Rajesh — Graphic Designer"
-            class="profile-photo"
-            loading="lazy"
-          >
+          <img src="profile-photo.png" alt="Rajesh — Graphic Designer" class="profile-photo">
           <small>RAJESH STUDIO / CREATIVE PORTFOLIO</small>
         </div>
 
@@ -1252,10 +1271,7 @@
         <span class="service-icon">✦</span>
         <div>
           <h3>GRAPHIC DESIGN</h3>
-          <p>
-            Social media creatives, advertising designs, campaign visuals,
-            posters and promotional artwork.
-          </p>
+          <p>Social media creatives, advertising designs, campaign visuals, posters and promotional artwork.</p>
         </div>
         <span class="service-arrow">↗</span>
       </div>
@@ -1265,10 +1281,7 @@
         <span class="service-icon">▶</span>
         <div>
           <h3>VIDEO EDITING</h3>
-          <p>
-            Professional reels, promotional videos, social content and
-            cinematic edits.
-          </p>
+          <p>Professional reels, promotional videos, social content and cinematic edits.</p>
         </div>
         <span class="service-arrow">↗</span>
       </div>
@@ -1278,10 +1291,7 @@
         <span class="service-icon">◈</span>
         <div>
           <h3>MOTION GRAPHICS</h3>
-          <p>
-            Animated typography, logo animation, promotional motion graphics
-            and visual effects.
-          </p>
+          <p>Animated typography, logo animation, promotional motion graphics and visual effects.</p>
         </div>
         <span class="service-arrow">↗</span>
       </div>
@@ -1291,10 +1301,7 @@
         <span class="service-icon">◎</span>
         <div>
           <h3>BRAND VISUALS</h3>
-          <p>
-            Visual identity systems, promotional materials and consistent
-            brand communication.
-          </p>
+          <p>Visual identity systems, promotional materials and consistent brand communication.</p>
         </div>
         <span class="service-arrow">↗</span>
       </div>
@@ -1304,10 +1311,7 @@
         <span class="service-icon">▦</span>
         <div>
           <h3>SOCIAL MEDIA DESIGN</h3>
-          <p>
-            High-impact creative content for Instagram, TikTok, Facebook
-            and other platforms.
-          </p>
+          <p>High-impact creative content for Instagram, TikTok, Facebook and other platforms.</p>
         </div>
         <span class="service-arrow">↗</span>
       </div>
@@ -1339,13 +1343,7 @@
         <div class="video-card reveal">
           <div class="video-preview">
             <span class="video-label">REEL / 01</span>
-            <video
-              class="video-tag"
-              src="reel-01.mp4"
-              controls
-              preload="metadata"
-              playsinline
-            ></video>
+            <video class="video-tag" src="reel-01.mp4" controls preload="metadata" playsinline></video>
           </div>
           <div class="video-info">
             <h3>FAST / FOCUSED</h3>
@@ -1356,13 +1354,7 @@
         <div class="video-card reveal">
           <div class="video-preview">
             <span class="video-label">REEL / 02</span>
-            <video
-              class="video-tag"
-              src="reel-02.mp4"
-              controls
-              preload="metadata"
-              playsinline
-            ></video>
+            <video class="video-tag" src="reel-02.mp4" controls preload="metadata" playsinline></video>
           </div>
           <div class="video-info">
             <h3>BRAND IN MOTION</h3>
@@ -1373,13 +1365,7 @@
         <div class="video-card reveal">
           <div class="video-preview">
             <span class="video-label">REEL / 03</span>
-            <video
-              class="video-tag"
-              src="reel-03.mp4"
-              controls
-              preload="metadata"
-              playsinline
-            ></video>
+            <video class="video-tag" src="reel-03.mp4" controls preload="metadata" playsinline></video>
           </div>
           <div class="video-info">
             <h3>VISUAL STORY</h3>
@@ -1390,13 +1376,7 @@
         <div class="video-card reveal">
           <div class="video-preview">
             <span class="video-label">REEL / 04</span>
-            <video
-              class="video-tag"
-              src="reel-04.mp4"
-              controls
-              preload="metadata"
-              playsinline
-            ></video>
+            <video class="video-tag" src="reel-04.mp4" controls preload="metadata" playsinline></video>
           </div>
           <div class="video-info">
             <h3>SOCIAL EDIT</h3>
@@ -1479,11 +1459,7 @@
 
         <article class="project reveal" data-type="social">
           <div class="project-image">
-            <img
-              src="project-mcdonalds-social.jpg"
-              alt="McDonald's social media testimonial campaign"
-              loading="lazy"
-            >
+            <img src="project-mcdonalds-social.jpg" alt="McDonald's social media testimonial campaign" loading="lazy">
             <span class="project-number">01</span>
           </div>
           <div class="project-info">
@@ -1498,11 +1474,7 @@
 
         <article class="project reveal" data-type="social">
           <div class="project-image">
-            <img
-              src="project-redbull-social.jpg"
-              alt="Red Bull social media testimonial campaign"
-              loading="lazy"
-            >
+            <img src="project-redbull-social.jpg" alt="Red Bull social media testimonial campaign" loading="lazy">
             <span class="project-number">02</span>
           </div>
           <div class="project-info">
@@ -1517,11 +1489,7 @@
 
         <article class="project reveal" data-type="branding">
           <div class="project-image">
-            <img
-              src="project-jewellery-branding.jpg"
-              alt="Bespoke jewellery brand identity grid"
-              loading="lazy"
-            >
+            <img src="project-jewellery-branding.jpg" alt="Bespoke jewellery brand identity grid" loading="lazy">
             <span class="project-number">03</span>
           </div>
           <div class="project-info">
@@ -1536,11 +1504,7 @@
 
         <article class="project reveal" data-type="branding">
           <div class="project-image">
-            <img
-              src="project-rfd-logo.jpg"
-              alt="Ratuwamai Food Delivery logo design"
-              loading="lazy"
-            >
+            <img src="project-rfd-logo.jpg" alt="Ratuwamai Food Delivery logo design" loading="lazy">
             <span class="project-number">04</span>
           </div>
           <div class="project-info">
@@ -1555,11 +1519,7 @@
 
         <article class="project reveal" data-type="travel">
           <div class="project-image">
-            <img
-              src="project-study-abroad-uk.jpg"
-              alt="Study abroad campaign poster"
-              loading="lazy"
-            >
+            <img src="project-study-abroad-uk.jpg" alt="Study abroad campaign poster" loading="lazy">
             <span class="project-number">05</span>
           </div>
           <div class="project-info">
@@ -1574,11 +1534,7 @@
 
         <article class="project reveal" data-type="travel">
           <div class="project-image">
-            <img
-              src="project-binmoosa-usa.jpg"
-              alt="USA Eastern Delight travel campaign poster"
-              loading="lazy"
-            >
+            <img src="project-binmoosa-usa.jpg" alt="USA Eastern Delight travel campaign poster" loading="lazy">
             <span class="project-number">06</span>
           </div>
           <div class="project-info">
@@ -1593,11 +1549,7 @@
 
         <article class="project reveal" data-type="fashion">
           <div class="project-image">
-            <img
-              src="project-ctrl-streetwear.jpg"
-              alt="CTRL streetwear drop campaign poster"
-              loading="lazy"
-            >
+            <img src="project-ctrl-streetwear.jpg" alt="CTRL streetwear drop campaign poster" loading="lazy">
             <span class="project-number">07</span>
           </div>
           <div class="project-info">
@@ -1612,11 +1564,7 @@
 
         <article class="project reveal" data-type="fashion">
           <div class="project-image">
-            <img
-              src="project-visora-hoody.jpg"
-              alt="Visora hoody product campaign poster"
-              loading="lazy"
-            >
+            <img src="project-visora-hoody.jpg" alt="Visora hoody product campaign poster" loading="lazy">
             <span class="project-number">08</span>
           </div>
           <div class="project-info">
@@ -1631,11 +1579,7 @@
 
         <article class="project reveal" data-type="graphic">
           <div class="project-image">
-            <img
-              src="project-glokitchen-menu.jpg"
-              alt="Glo Kitchen restaurant menu design"
-              loading="lazy"
-            >
+            <img src="project-glokitchen-menu.jpg" alt="Glo Kitchen restaurant menu design" loading="lazy">
             <span class="project-number">09</span>
           </div>
           <div class="project-info">
@@ -1785,10 +1729,10 @@
 
     <div class="social">
       <a href="mailto:rajeshbasnet1000@gmail.com">EMAIL</a>
-      <a href="javascript:void(0)" onclick="showToast('Add your Instagram link here.');return false;">INSTAGRAM</a>
-      <a href="javascript:void(0)" onclick="showToast('Add your TikTok link here.');return false;">TIKTOK</a>
-      <a href="javascript:void(0)" onclick="showToast('Add your Behance link here.');return false;">BEHANCE</a>
-      <a href="javascript:void(0)" onclick="showToast('Add your LinkedIn link here.');return false;">LINKEDIN</a>
+      <a href="#" onclick="showToast('Add your Instagram link here.');return false;">INSTAGRAM</a>
+      <a href="#" onclick="showToast('Add your TikTok link here.');return false;">TIKTOK</a>
+      <a href="#" onclick="showToast('Add your Behance link here.');return false;">BEHANCE</a>
+      <a href="#" onclick="showToast('Add your LinkedIn link here.');return false;">LINKEDIN</a>
     </div>
 
   </div>
@@ -1799,201 +1743,247 @@
   </div>
 </footer>
 
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="toast" id="toast"></div>
 
 <script>
   "use strict";
 
-  /* MOBILE MENU */
-  const menuBtn = document.getElementById("menuBtn");
-  const navLinks = document.getElementById("navLinks");
+  /* =========================
+     SAFE DOM HELPERS
+  ========================= */
+  const $ = (selector, root = document) => root.querySelector(selector);
+  const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+
+  /* =========================
+     MOBILE NAVIGATION
+  ========================= */
+  const menuBtn = $("#menuBtn");
+  const navLinks = $("#navLinks");
+
+  function closeMenu(){
+    if (!navLinks || !menuBtn) return;
+    navLinks.classList.remove("open");
+    menuBtn.setAttribute("aria-expanded", "false");
+    menuBtn.setAttribute("aria-label", "Open menu");
+  }
 
   if (menuBtn && navLinks) {
     menuBtn.addEventListener("click", () => {
-      const isOpen = navLinks.classList.toggle("open");
-
-      menuBtn.setAttribute("aria-expanded", String(isOpen));
-      menuBtn.setAttribute(
-        "aria-label",
-        isOpen ? "Close menu" : "Open menu"
-      );
+      const open = navLinks.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", String(open));
+      menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     });
 
-    document.querySelectorAll(".nav-links a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
-        menuBtn.setAttribute("aria-expanded", "false");
-        menuBtn.setAttribute("aria-label", "Open menu");
-      });
+    $$("a", navLinks).forEach(link => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("click", event => {
+      if (!navLinks.classList.contains("open")) return;
+      if (!navLinks.contains(event.target) && !menuBtn.contains(event.target)) {
+        closeMenu();
+      }
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") closeMenu();
     });
   }
 
-  /* SCROLL ANIMATION */
-  const observer = "IntersectionObserver" in window
-    ? new IntersectionObserver(
-        entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("show");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.1 }
-      )
-    : null;
+  /* =========================
+     SCROLL REVEAL
+  ========================= */
+  const revealElements = $$(".reveal");
+  const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
 
-  document.querySelectorAll(".reveal").forEach(element => {
-    if (observer) {
-      observer.observe(element);
-    } else {
-      element.classList.add("show");
-    }
-  });
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    revealElements.forEach(element => element.classList.add("show"));
+  } else {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
 
-  /* PORTFOLIO FILTER */
-  const filterButtons = document.querySelectorAll(".filter");
-  const projects = document.querySelectorAll(".project");
+    revealElements.forEach(element => observer.observe(element));
+  }
+
+  /* =========================
+     PORTFOLIO FILTER
+  ========================= */
+  const filterButtons = $$(".filter");
+  const projects = $$(".project");
 
   filterButtons.forEach(button => {
     button.addEventListener("click", () => {
-      filterButtons.forEach(btn => btn.classList.remove("active"));
-      button.classList.add("active");
+      const filter = button.dataset.filter || "all";
 
-      const filter = button.dataset.filter;
+      filterButtons.forEach(item => {
+        item.classList.toggle("active", item === button);
+      });
 
       projects.forEach(project => {
-        const matches =
-          filter === "all" ||
-          project.dataset.type === filter;
-
-        project.classList.toggle("hidden", !matches);
+        const type = project.dataset.type || "";
+        const visible = filter === "all" || type === filter;
+        project.classList.toggle("hidden", !visible);
       });
     });
   });
 
-  /* TESTIMONIAL SLIDER */
+  /* =========================
+     TESTIMONIAL SLIDER
+  ========================= */
+  const quotes = $$(".quote");
+  const quoteNumber = $("#quoteNumber");
+  const previousQuote = $("#previousQuote");
+  const nextQuote = $("#nextQuote");
   let quoteIndex = 0;
-  const quotes = document.querySelectorAll(".quote");
-  const quoteNumber = document.getElementById("quoteNumber");
-  const previousQuote = document.getElementById("previousQuote");
-  const nextQuote = document.getElementById("nextQuote");
 
-  function showQuote(index) {
-    if (!quotes.length || !quoteNumber) return;
+  function showQuote(index){
+    if (!quotes.length) return;
 
-    quoteIndex =
-      (index + quotes.length) % quotes.length;
+    quoteIndex = (index + quotes.length) % quotes.length;
 
     quotes.forEach((quote, i) => {
-      quote.classList.toggle(
-        "active",
-        i === quoteIndex
-      );
+      quote.classList.toggle("active", i === quoteIndex);
     });
 
-    quoteNumber.textContent =
-      String(quoteIndex + 1).padStart(2, "0") +
-      " / " +
-      String(quotes.length).padStart(2, "0");
+    if (quoteNumber) {
+      quoteNumber.textContent =
+        `${String(quoteIndex + 1).padStart(2, "0")} / ${String(quotes.length).padStart(2, "0")}`;
+    }
   }
 
-  if (previousQuote) {
-    previousQuote.addEventListener("click", () => {
-      showQuote(quoteIndex - 1);
-    });
+  previousQuote?.addEventListener("click", () => showQuote(quoteIndex - 1));
+  nextQuote?.addEventListener("click", () => showQuote(quoteIndex + 1));
+  showQuote(0);
+
+  /* =========================
+     TOAST
+  ========================= */
+  const toast = $("#toast");
+  let toastTimer;
+
+  function showToast(message){
+    if (!toast) return;
+    toast.textContent = message;
+    toast.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove("show"), 2400);
   }
 
-  if (nextQuote) {
-    nextQuote.addEventListener("click", () => {
-      showQuote(quoteIndex + 1);
-    });
-  }
+  window.showToast = showToast;
 
-  /* COPY EMAIL */
+  /* =========================
+     COPY EMAIL
+  ========================= */
   const email = "rajeshbasnet1000@gmail.com";
-  const copyEmailButton = document.getElementById("copyEmail");
+  const copyEmail = $("#copyEmail");
 
-  async function copyText(text) {
-    if (
-      navigator.clipboard &&
-      window.isSecureContext
-    ) {
+  async function copyText(text){
+    if (navigator.clipboard && window.isSecureContext) {
       await navigator.clipboard.writeText(text);
       return true;
     }
 
-    const textarea =
-      document.createElement("textarea");
-
+    const textarea = document.createElement("textarea");
     textarea.value = text;
     textarea.setAttribute("readonly", "");
     textarea.style.position = "fixed";
-    textarea.style.opacity = "0";
-
+    textarea.style.left = "-9999px";
+    textarea.style.top = "0";
     document.body.appendChild(textarea);
-
     textarea.focus();
     textarea.select();
 
     let copied = false;
-
     try {
-      copied =
-        typeof document.execCommand === "function"
-          ? document.execCommand("copy")
-          : false;
-    } finally {
-      textarea.remove();
+      copied = typeof document.execCommand === "function" && document.execCommand("copy");
+    } catch (error) {
+      copied = false;
     }
 
+    textarea.remove();
     return copied;
   }
 
-  if (copyEmailButton) {
-    copyEmailButton.addEventListener(
-      "click",
-      async () => {
-        try {
-          const copied = await copyText(email);
+  copyEmail?.addEventListener("click", async () => {
+    try {
+      const copied = await copyText(email);
+      showToast(copied ? "Email copied!" : "Please copy the email manually.");
+    } catch (error) {
+      showToast("Please copy the email manually.");
+    }
+  });
 
-          showToast(
-            copied
-              ? "Email copied!"
-              : "Copy failed — please copy the email manually."
-          );
-        } catch (error) {
-          showToast(
-            "Copy failed — please copy the email manually."
-          );
-        }
-      }
-    );
-  }
+  /* =========================
+     BROKEN IMAGE FALLBACKS
+     GitHub Pages is case-sensitive, so a missing/misnamed asset
+     should never leave an ugly broken-image icon.
+  ========================= */
+  $$("img").forEach(image => {
+    image.addEventListener("error", () => {
+      if (image.dataset.fallbackApplied) return;
+      image.dataset.fallbackApplied = "true";
 
-  /* TOAST */
-  let toastTimer;
+      const fallback = document.createElement("div");
+      fallback.className = "media-fallback";
+      fallback.innerHTML = `<div><strong>${image.alt || "Portfolio image"}</strong>Replace this image file in the GitHub repository.</div>`;
 
-  function showToast(message) {
-    const toast =
-      document.getElementById("toast");
+      image.replaceWith(fallback);
+    });
+  });
 
-    if (!toast) return;
+  /* =========================
+     VIDEO FALLBACKS
+     A GitHub Pages site can serve MP4 files, but the MP4 files must
+     actually be committed to the repository.
+  ========================= */
+  $$("video").forEach(video => {
+    const fallback = document.createElement("div");
+    fallback.className = "media-fallback";
+    fallback.innerHTML = `<div><strong>VIDEO PROJECT</strong>Add the matching MP4 file to the GitHub repository.</div>`;
+    fallback.hidden = true;
 
-    toast.textContent = message;
-    toast.classList.add("show");
+    video.insertAdjacentElement("afterend", fallback);
 
-    clearTimeout(toastTimer);
+    video.addEventListener("error", () => {
+      video.hidden = true;
+      fallback.hidden = false;
+    });
 
-    toastTimer = setTimeout(() => {
-      toast.classList.remove("show");
-    }, 2200);
-  }
+    video.addEventListener("loadeddata", () => {
+      fallback.hidden = true;
+      video.hidden = false;
+    });
+  });
+
+  /* =========================
+     SMOOTH ANCHOR SCROLL
+     Keeps the fixed header from covering section headings.
+  ========================= */
+  $$('a[href^="#"]').forEach(link => {
+    link.addEventListener("click", event => {
+      const id = link.getAttribute("href");
+      if (!id || id === "#") return;
+
+      const target = document.querySelector(id);
+      if (!target) return;
+
+      event.preventDefault();
+      const header = $("header");
+      const offset = (header?.offsetHeight || 0) + 12;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+
+      window.scrollTo({
+        top: Math.max(0, top),
+        behavior: reduceMotion ? "auto" : "smooth"
+      });
+
+      history.replaceState(null, "", id);
+    });
+  });
 </script>
-
-</body>
-</html>
-</script>
-
-</body>
-</html>
